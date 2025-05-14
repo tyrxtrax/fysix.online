@@ -81,3 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
         link.click();
     });
 })
+// script.js
+document.getElementById('themeSelect').addEventListener('change', function () {
+    if (this.value === 'light') {
+        document.body.classList.add('light-mode');
+        document.querySelectorAll('.modal-content').forEach(modal => modal.classList.add('light-mode'));
+    } else {
+        document.body.classList.remove('light-mode');
+        document.querySelectorAll('.modal-content').forEach(modal => modal.classList.remove('light-mode'));
+    }
+});
