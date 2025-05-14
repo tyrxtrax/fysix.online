@@ -219,3 +219,86 @@ body.light-mode .sidebar button {
     text-decoration: none;
     cursor: pointer;
 }
+/* Existing styles remain the same */
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: space-around;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+
+    .editor-container {
+        padding: 10px;
+        height: auto;
+    }
+
+    .editor {
+        height: 300px;
+        font-size: 14px;
+    }
+
+    .execution-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .execution-controls button {
+        width: 100%;
+    }
+
+    .terminal {
+        height: 200px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .settings-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .sidebar button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .editor {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
