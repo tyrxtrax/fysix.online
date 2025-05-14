@@ -1,0 +1,6 @@
+{
+    "theme": "dark",
+    "fontSize": "16px",
+    "executionTimeout": "60",  // seconds
+    "maxMemoryUsage": "1024MB"
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Code Executor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfect Code Executor</h1>
+        <div class="settings">
+            <button id="settingsBtn" class="settings-btn">Settings</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <button id="fileManagementBtn">File Management</button>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor" contenteditable="true" id="codeEditor">
+                // Write your code here...
+            </div>
+            <div class="execution-controls">
+                <button id="runBtn">Run</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="stopBtn">Stop</button>
+            </div>
+        </div>
+
+        <div class="terminal" id="output">
+            // Output will be shown here...
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="#">Perfect Code Executor</a></p>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="settingsCloseBtn">&times;</span>
+            <h2>Settings</h2>
+            <label for="themeSelect">Theme:</label>
+            <select id="themeSelect">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+            <br>
+            <button id="saveSettingsBtn" class="settings-btn">Save Settings</button>
+        </div>
+    </div>
+
+    <!-- File Management Modal -->
+    <div id="fileManagementModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="fileManagementCloseBtn">&times;</span>
+            <h2>File Management</h2>
+            <input aria-label="File input" type="file" id="fileInput">
+            <br>
+            <button id="uploadFileBtn">Upload File</button>
+            <button id="saveFileBtn">Save File</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

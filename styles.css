@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #212121;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ff5f00;
+    font-size: 24px;
+}
+
+.settings {
+    display: flex;
+    gap: 20px;
+}
+
+.settings-btn {
+    background-color: #ff5f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.settings-btn:hover {
+    background-color: #e06c00;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.editor-container {
+    flex: 2;
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor {
+    height: 70%;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    color: #dcdcdc;
+    padding: 20px;
+    font-size: 16px;
+    overflow-y: auto;
+    resize: vertical;
+}
+
+.execution-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.execution-controls button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5f00;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.execution-controls button:hover {
+    background-color: #e06c00;
+}
+
+.terminal {
+    flex: 1;
+    background-color: #2a2a2a;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: auto;
+    color: #ccc;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid #444;
+}
+
+.sidebar button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #ff5f00;
+}
+
+footer {
+    background-color: #212121;
+    color: #bbb;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ff5f00;
+    text-decoration: none;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #181818;
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+}
+
+body.light-mode .settings-btn {
+    background-color: #ff5f00;
+    color: #fff;
+}
+
+body.light-mode .editor-container {
+    background-color: #ffffff;
+}
+
+body.light-mode .editor {
+    background-color: #f5f5f5;
+    color: #181818;
+}
+
+body.light-mode .execution-controls button {
+    background-color: #ff5f00;
+}
+
+body.light-mode .terminal {
+    background-color: #f5f5f5;
+    color: #181818;
+}
+
+body.light-mode .sidebar {
+    background-color: #ffffff;
+}
+
+body.light-mode .sidebar button {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 5px;
+}
+
+.modal-content.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5f00;
+    text-decoration: none;
+    cursor: pointer;
+}
