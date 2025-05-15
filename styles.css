@@ -136,7 +136,6 @@ footer a {
     text-decoration: none;
 }
 
-/* Light Mode Styles */
 body.light-mode {
     background-color: #f0f0f0;
     color: #181818;
@@ -178,7 +177,6 @@ body.light-mode .sidebar button {
     color: #fff;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -219,9 +217,8 @@ body.light-mode .sidebar button {
     text-decoration: none;
     cursor: pointer;
 }
-/* Existing styles remain the same */
 
-/* Responsive Adjustments */
+
 @media (max-width: 1024px) {
     main {
         flex-direction: column;
