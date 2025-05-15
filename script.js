@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Elements
     const runBtn = document.getElementById('runBtn');
     const pauseBtn = document.getElementById('pauseBtn');
     const stopBtn = document.getElementById('stopBtn');
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const output = document.getElementById('output');
     const codeEditor = document.getElementById('codeEditor');
 
-    // Modals
     const settingsModal = document.getElementById('settingsModal');
     const settingsCloseBtn = document.getElementById('settingsCloseBtn');
     const fileManagementModal = document.getElementById('fileManagementModal');
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadFileBtn = document.getElementById('uploadFileBtn');
     const saveFileBtn = document.getElementById('saveFileBtn');
 
-    // Modal handling
     settingsBtn.addEventListener('click', () => {
         settingsModal.style.display = 'block';
     });
@@ -37,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fileManagementModal.style.display = 'none';
     });
 
-    // Handle code execution
     runBtn.addEventListener('click', () => {
         const code = codeEditor.innerText;
         output.innerHTML = `Running code: <pre>${code}</pre>`;
@@ -51,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         output.innerHTML += `<br>Execution stopped.`;
     });
 
-    // Save settings
     saveSettingsBtn.addEventListener('click', () => {
         const theme = themeSelect.value;
         if (theme === 'dark') {
@@ -63,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Settings saved!');
     });
 
-    // Handle file upload and save
+    
     uploadFileBtn.addEventListener('click', () => {
         const file = document.getElementById('fileInput').files[0];
         if (file) {
@@ -73,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     saveFileBtn.addEventListener('click', () => {
         const code = codeEditor.innerText;
-        // Save the code to a file
         const blob = new Blob([code], { type: 'text/plain' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
@@ -81,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.click();
     });
 })
-// script.js
 document.getElementById('themeSelect').addEventListener('change', function () {
     if (this.value === 'light') {
         document.body.classList.add('light-mode');
